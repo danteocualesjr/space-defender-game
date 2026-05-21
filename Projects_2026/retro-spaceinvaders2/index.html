@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPACE INVADERS</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="game-container">
+        <div class="crt-overlay"></div>
+        <div class="scanlines"></div>
+        <canvas id="gameCanvas"></canvas>
+        <div class="ui-overlay">
+            <div class="score-display">
+                <span class="label">SCORE</span>
+                <span id="score" class="value">0000</span>
+            </div>
+            <div class="high-score-display">
+                <span class="label">HI-SCORE</span>
+                <span id="highScore" class="value">0000</span>
+            </div>
+            <div class="lives-display">
+                <span class="label">LIVES</span>
+                <span id="lives" class="value"></span>
+            </div>
+        </div>
+        <div id="startScreen" class="screen">
+            <h1 class="title">SPACE<br>INVADERS</h1>
+            <p class="subtitle">PRESS SPACE TO START</p>
+            <div class="controls-info">
+                <p>← → or A D to MOVE</p>
+                <p>SPACE to FIRE</p>
+            </div>
+        </div>
+        <div id="gameOverScreen" class="screen hidden">
+            <h2 class="game-over-title">GAME OVER</h2>
+            <p class="final-score">SCORE: <span id="finalScore">0000</span></p>
+            <p class="subtitle">PRESS SPACE TO PLAY AGAIN</p>
+        </div>
+        <div id="waveScreen" class="screen hidden">
+            <h2 class="wave-title">WAVE <span id="waveNumber">1</span></h2>
+        </div>
+    </div>
+
+    <script src="js/utils.js"></script>
+    <script src="js/audio.js"></script>
+    <script src="js/effects.js"></script>
+    <script src="js/bullet.js"></script>
+    <script src="js/player.js"></script>
+    <script src="js/invaders.js"></script>
+    <script src="js/shields.js"></script>
+    <script src="js/game.js"></script>
+</body>
+</html>
